@@ -1,0 +1,178 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "JIRA Issues Table (Aligned)",
+            "weight": "bolder",
+            "size": "Large",
+            "wrap": true
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Eng Lead",
+                                    "weight": "bolder",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "1"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Assignee",
+                                    "weight": "bolder",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "1"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Issue key",
+                                    "weight": "bolder",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "1"
+                        }
+                    ],
+                    "style": "emphasis"
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Venkatesh M",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "1"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "John Doe",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "1"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "[TESt-01](https://domain.com/brower/TEST-01)",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "1"
+                        }
+                    ],
+                    "style": "default"
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Rajesh K",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "1"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Jane Smith",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "1"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "[TESt-02](https://domain.com/brower/TEST-02)",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "1"
+                        }
+                    ],
+                    "style": "emphasis"
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Abdul R",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "1"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "Emily Davis",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "1"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "[TESt-03](https://domain.com/brower/TEST-03)",
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "1"
+                        }
+                    ],
+                    "style": "default"
+                }
+            ]
+        }
+    ]
+}
