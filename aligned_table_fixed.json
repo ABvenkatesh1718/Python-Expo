@@ -23,7 +23,8 @@
                                     "type": "TextBlock",
                                     "text": "Eng Lead",
                                     "weight": "bolder",
-                                    "wrap": true
+                                    "wrap": true,
+                                    "horizontalAlignment": "Center"
                                 }
                             ],
                             "width": "1"
@@ -35,7 +36,8 @@
                                     "type": "TextBlock",
                                     "text": "Assignee",
                                     "weight": "bolder",
-                                    "wrap": true
+                                    "wrap": true,
+                                    "horizontalAlignment": "Center"
                                 }
                             ],
                             "width": "1"
@@ -47,13 +49,15 @@
                                     "type": "TextBlock",
                                     "text": "Issue key",
                                     "weight": "bolder",
-                                    "wrap": true
+                                    "wrap": true,
+                                    "horizontalAlignment": "Center"
                                 }
                             ],
                             "width": "1"
                         }
                     ],
-                    "style": "emphasis"
+                    "style": "emphasis",
+                    "verticalContentAlignment": "Center"
                 },
                 {
                     "type": "Container",
@@ -67,8 +71,9 @@
                                     "items": [
                                         {
                                             "type": "TextBlock",
-                                            "text": "Venkatesh M",
-                                            "wrap": true
+                                            "text": "Venkatesh Madireddy",
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center"
                                         }
                                     ],
                                     "width": "1"
@@ -79,7 +84,8 @@
                                         {
                                             "type": "TextBlock",
                                             "text": "John Doe",
-                                            "wrap": true
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center"
                                         }
                                     ],
                                     "width": "1"
@@ -90,14 +96,17 @@
                                         {
                                             "type": "TextBlock",
                                             "text": "[TESt-01](https://domain.com/brower/TEST-01)",
-                                            "wrap": true
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center"
                                         }
                                     ],
                                     "width": "1"
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "spacing": "Small",
+                    "verticalContentAlignment": "Center"
                 },
                 {
                     "type": "Container",
@@ -111,8 +120,9 @@
                                     "items": [
                                         {
                                             "type": "TextBlock",
-                                            "text": "Rajesh K",
-                                            "wrap": true
+                                            "text": "Rajesh Panchal",
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center"
                                         }
                                     ],
                                     "width": "1"
@@ -123,7 +133,8 @@
                                         {
                                             "type": "TextBlock",
                                             "text": "Jane Smith",
-                                            "wrap": true
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center"
                                         }
                                     ],
                                     "width": "1"
@@ -134,14 +145,17 @@
                                         {
                                             "type": "TextBlock",
                                             "text": "[TESt-02](https://domain.com/brower/TEST-02)",
-                                            "wrap": true
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center"
                                         }
                                     ],
                                     "width": "1"
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "spacing": "Small",
+                    "verticalContentAlignment": "Center"
                 },
                 {
                     "type": "Container",
@@ -155,8 +169,9 @@
                                     "items": [
                                         {
                                             "type": "TextBlock",
-                                            "text": "Abdul R",
-                                            "wrap": true
+                                            "text": "Abdul",
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center"
                                         }
                                     ],
                                     "width": "1"
@@ -167,7 +182,8 @@
                                         {
                                             "type": "TextBlock",
                                             "text": "Emily Davis",
-                                            "wrap": true
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center"
                                         }
                                     ],
                                     "width": "1"
@@ -178,14 +194,17 @@
                                         {
                                             "type": "TextBlock",
                                             "text": "[TESt-03](https://domain.com/brower/TEST-03)",
-                                            "wrap": true
+                                            "wrap": true,
+                                            "horizontalAlignment": "Center"
                                         }
                                     ],
                                     "width": "1"
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    "spacing": "Small",
+                    "verticalContentAlignment": "Center"
                 }
             ]
         }

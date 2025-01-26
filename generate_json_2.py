@@ -1,10 +1,10 @@
 import pandas as pd
 import json
-import re
+import re,os
 
 def generate_aligned_adaptive_card(dataframe, subject):
     """
-    Generates an Adaptive Card table with consistent styling for rows, adding a single box-like color.
+    Generates an Adaptive Card table with consistent styling and improved alignment.
 
     Args:
         dataframe (pd.DataFrame): The data to include in the table.
@@ -44,19 +44,20 @@ def generate_aligned_adaptive_card(dataframe, subject):
                         "type": "TextBlock",
                         "text": column_name.strip(),
                         "weight": "bolder",
-                        "wrap": True
+                        "wrap": True,
+                        "horizontalAlignment": "Center"  # Center-align header text
                     }
                 ],
                 "width": "1"  # Fixed equal width for all columns
             } for column_name in dataframe.columns
         ],
-        "style": "emphasis"  # Dark background for headers
+        "style": "emphasis",  # Dark background for headers
+        "verticalContentAlignment": "Center"  # Center the text vertically
     }
     adaptive_card_template["body"][1]["items"].append(header_row)
 
-    # Add the data rows with a single box color
+    # Add the data rows with consistent alignment
     for _, row in dataframe.iterrows():
-        # Create a container for the entire row
         row_container = {
             "type": "Container",
             "style": "default",  # Define a single style for all rows
@@ -65,7 +66,9 @@ def generate_aligned_adaptive_card(dataframe, subject):
                     "type": "ColumnSet",
                     "columns": []
                 }
-            ]
+            ],
+            "spacing": "Small",  # Add some space between rows
+            "verticalContentAlignment": "Center"  # Center-align row text
         }
 
         # Populate columns within the row
@@ -80,7 +83,8 @@ def generate_aligned_adaptive_card(dataframe, subject):
                         {
                             "type": "TextBlock",
                             "text": f"[{issue_key}]({url})",  # Markdown-style link
-                            "wrap": True
+                            "wrap": True,
+                            "horizontalAlignment": "Center"  # Center-align the issue key
                         }
                     ],
                     "width": "1"  # Fixed equal width for all columns
@@ -93,7 +97,8 @@ def generate_aligned_adaptive_card(dataframe, subject):
                         {
                             "type": "TextBlock",
                             "text": cell_value,
-                            "wrap": True
+                            "wrap": True,
+                            "horizontalAlignment": "Center"  # Center-align column text
                         }
                     ],
                     "width": "1"  # Fixed equal width for all columns
@@ -102,8 +107,11 @@ def generate_aligned_adaptive_card(dataframe, subject):
         # Add the row container to the body
         adaptive_card_template["body"][1]["items"].append(row_container)
 
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # Save the file in the same directory as the script
+    output_path = os.path.join(script_dir, 'aligned_table_fixed.json')
     # Save the Adaptive Card JSON to a file
-    with open('aligned_table_fixed.json', 'w') as json_file:
+    with open(output_path, 'w') as json_file:
         json.dump(adaptive_card_template, json_file, indent=4)
 
     return adaptive_card_template
@@ -135,7 +143,7 @@ def extract_url_and_issue_key(input_string):
 
 # Sample DataFrame for testing
 data = {
-    'Eng Lead': ['Venkatesh M', 'Rajesh K', 'Abdul R'],
+    'Eng Lead': ['Venkatesh Madireddy', 'Rajesh Panchal', 'Abdul'],
     'Assignee': ['John Doe', 'Jane Smith', 'Emily Davis'],
     'Issue key': [
         '<a href="https://domain.com/brower/TEST-01" target="_blank">TESt-01</a>',
